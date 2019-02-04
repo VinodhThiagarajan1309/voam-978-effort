@@ -100,4 +100,21 @@ public class FindPivotIndexTest {
 
     }
 
+    /**
+     * Very Specific Input
+     */
+    @Test
+    public void test_For_bunch_of_negatives() {
+        int[] arrWithOneElement = new int[6];
+        arrWithOneElement[0] = -1;
+        arrWithOneElement[1] = -1;
+        arrWithOneElement[2] = -1;
+        arrWithOneElement[3] = 0;
+        arrWithOneElement[4] = 1;
+        arrWithOneElement[5] = 1;
+
+        int result = findPivotIndex.findPivotIndex(arrWithOneElement);
+        assertThat(3, Is.is(equalTo(result)) );
+    }
+
 }

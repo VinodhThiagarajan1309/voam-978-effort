@@ -6,14 +6,12 @@ public class FindPivotIndex {
 
         if(num.length == 1) {
             return 0;
-        } else if (num.length == 2) {
-            return -1;
         }
 
         int leftMostPivotIndexStorage = -10000;
 
 
-        for(int i = 1 ; i < num.length-1; i++) {
+        for(int i = 0 ; i < num.length; i++) {
             int leftSum = 0;
             int rightSum = 0;
 
